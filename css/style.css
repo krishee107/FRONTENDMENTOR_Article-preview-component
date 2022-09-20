@@ -1,0 +1,101 @@
+/* GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root{
+    --color1:hsl(217, 19%, 35%);
+    --color2:hsl(214, 17%, 51%);
+    --color3:hsl(212, 23%, 69%);
+    --color4:hsl(210, 46%, 95%);
+}
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+body {
+    background: var(--color4);
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* CAJA */
+main {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 50%;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+/* INFO */
+#info {
+    padding: 15px;
+    display: grid;
+}
+#imgArticle img {
+    width: 100%;
+    height: 100%;
+}
+h1{
+    font-size: 25px;
+    color: var(--color1);
+}
+article{
+    color: var(--color2);
+}
+
+#extra {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+/*Autor*/
+#author {
+    display: grid;
+    grid-template-areas:
+        "A N"
+        "A D";
+    width: fit-content;
+    align-items: center;
+    column-gap: 10px;
+}
+#name{
+    color: var(--color1);
+    grid-area: N;
+    font-weight: bold;
+}
+#date{
+    color: var(--color3);
+    grid-area: D;
+}
+#avatar {
+    border-radius: 50px;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    grid-area: A;
+}#avatar img {width: 100%;height: 100%;}
+
+#share {
+    background: #ecf2f8;
+    justify-self: end;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}#share:hover {
+    background: #6e8098;
+}
+
+@media (max-width: 600px) {
+    main {
+        display: unset;
+        width: 90%;
+    }
+  }
